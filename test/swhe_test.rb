@@ -160,17 +160,4 @@ class TestSWHE < Minitest::Test
     assert_equal m1 * m2, res_d
   end
 
-  def test_exponentiation
-    m1 = X::SWHE.random_number(8)
-    s = 3
-
-    c1 = @x.encrypt(m1,true)
-
-    res = c1.scalar_mul(c1.number ** (s - 1))
-
-    res_d = @x.decrypt(res)
-
-    assert_equal m1 ** s, res_d
-  end
-
 end
