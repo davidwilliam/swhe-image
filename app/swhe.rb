@@ -110,6 +110,16 @@ module X
       mm = Multivector2D.new mm_h.data.map{|m| hensel_decoding(m, p1) }
     end
 
+    def self.modular_pow( base, power, mod )
+      res = 1
+      while power > 0
+        res = (res * base) % mod if power & 1 == 1
+        base = base ** 2 % mod
+        power >>= 1
+      end
+      res
+    end
+
     def encrypted_isomorphic_multivector
       one = self.class.random_packing(1,p2,true)
       one_h = self.class.hensel_sealing(one,p1,q)

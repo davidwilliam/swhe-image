@@ -1,11 +1,15 @@
-# SWHE
-Ruby code for an SWHE Library
+# SWHE Image Encryption
+Ruby code for an SWHE Library Image Encryption
 
 ## Requirements
 
 This code requires Ruby installed on your system. There are [several options for downloading and installing Ruby](https://www.ruby-lang.org/en/downloads/ "Download Ruby").
 
-This project uses only Ruby standard libraries, so once you have Ruby installed (version 2.2.3 and greater), you have everything required to run the code.
+This project uses mostly Ruby standard libraries, so once you have Ruby installed (version 2.4.0 and greater), you have everything required to run the code.
+
+### Special Requirement
+
+This project uses **RMagick** for handling image data read and write. Please check their [repository](https://github.com/rmagick/rmagick) for instructions on how to properly install RMagick on your system.
 
 ## Usage
 
@@ -78,3 +82,33 @@ Decrypt c1_mul_c2:
 As a result you should get:
 
 `=> (48279/1)`
+
+## Homomorphic Image Examples
+
+Although you can create your own script of encrypted image manipulation, we prepared few examples to illustrate the basic functions of our library.
+
+All the command below consider you are on the project root folder, using a terminal.
+
+### Increase brightness
+
+`$ ruby examples/increase_brightness.rb`
+
+### Decrease brightness
+
+`$ ruby examples/decrease_brightness.rb`
+
+### Merge images
+
+`$ ruby examples/merge_images.rb`
+
+### Mask images
+
+`$ ruby examples/mask_image.rb`
+
+### Contrast Stretching
+
+`$ ruby examples/contrast_stretching.rb`
+
+### Logical not
+
+`$ ruby examples/logical_not.rb`
