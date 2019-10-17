@@ -1,5 +1,5 @@
 # SWHE Image Encryption
-Ruby code for an SWHE Library Image Encryption
+Ruby code for an SWHE for Image Processing
 
 ## Requirements
 
