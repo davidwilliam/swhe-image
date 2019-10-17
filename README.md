@@ -1,5 +1,5 @@
 # SWHE Image Encryption
-Ruby code for an SWHE for Image Processing
+Ruby code for an SWHE for Image Processing by By David W. H. A. da Silva (dhonorio@uccs.edu)
 
 ## Requirements
 
